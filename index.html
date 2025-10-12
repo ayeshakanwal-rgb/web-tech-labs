@@ -1,8 +1,143 @@
-<h1>Welcome to My Web Technologies lab</h1>
-<ul>
-    <li><a href="lab02/index.html">Lab 02</a></li>
-    <li><a href="lab02/profile.html">Profile page</a></li>
-    <li><a href="lab02/schedule.html">Course Schedule</a></li>
-    <li><a href="lab02/navigation.html">Navigation Menu</a></li>
-    <li><a href="lab02/registration.html">Registration Form</a></li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tech Labs - Portfolio</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 20px ;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            margin-top: 0;
+            color: #2980b9;
+        }
+
+        .lab-links a {
+            display: inline-block;
+            margin: 10px 10px 0 0;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .lab-links a:hover {
+            background-color: #1abc9c;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        /* Responsive */
+        @media(max-width: 600px){
+            nav {
+                flex-direction: column;
+            }
+            .lab-links a {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Web Technologies Lab Portfolio</h1>
+        <p>Student: Ayesha Kanwal | University of Engineering & Technology, Peshawar</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#labs">Labs</a>
+        <a href="https://github.com/ayeshakanwal-rgb" target="_blank">GitHub Profile</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <section class="section" id="intro">
+            <h2>About Me</h2>
+            <p>Hello! I am a Computer Science student at UET Peshawar. I am passionate about web technologies, programming, and creating interactive web applications. This portfolio showcases my Lab exercises for the Web Technologies course.</p>
+        </section>
+
+        <!-- Lab Links -->
+        <section class="section" id="labs">
+            <h2>Lab Exercises</h2>
+            <div class="lab-links">
+                <a href="lab01/index.html">Lab 01</a>
+                <a href="lab02/profile.html">Profile Page</a>
+                <a href="lab02/schedule.html">Course Schedule</a>
+                <a href="lab02/navigation.html">Navigation Menu</a>
+                <a href="lab02/registration.html">Registration Form</a>
+            </div>
+        </section>
+
+        <!-- Contact / Info -->
+        <section class="section" id="contact">
+            <h2>Contact & Info</h2>
+            <p>Email: 24pwbcs1065@uetpeshawar.edu.pk</p>
+            <p>Phone: +92 3195503780 </p>
+            <p>GitHub: <a href="https://github.com/ayeshakanwal-rgb" target="_blank">https://github.com/ayeshakanwal-rgb</a></p>
+            <p>University of Engineering & Technology, Peshawar</p>
+        </section>
+    </main>
+
+   
+    <footer>
+        &copy; 2025 Web Technologies Lab Portfolio
+    </footer>
+</body>
+</html>
