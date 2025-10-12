@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link href="../Assets/css/style.css" rel="stylesheet">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        form { max-width: 500px; margin: auto; }
+        input, textarea, button { width: 100%; padding: 10px; margin: 10px 0; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Web Technologies Lab Portfolio</h1>
+        <p>Student: Ayesha Kanwal | UET Peshawar</p>
+    </header>
+
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="profile.html" class="nav-link">Profile</a>
+        <a href="schedule.html" class="nav-link">Schedule</a>
+        <a href="navigation.html" class="nav-link">Navigation</a>
+        <a href="registration.html" class="nav-link">Registration</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+</body>
+</html>
