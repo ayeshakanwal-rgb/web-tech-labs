@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course schedule</title>
+    <style>
+          
+          h1{
+            text-align: center;
+            margin-bottom: 20px;
+          }
+
+          table{
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px;
+          }
+
+          th{
+            border: 2px;
+            padding: 10px;
+            text-align: center;
+            background-color: grey;
+          }
+          td{
+            border: 2px;
+            padding: 10px;
+            text-align: center;
+            color:black;
+          }
+
+          td.lunch{
+            background-color: darkgray;
+            font-weight: bold;
+          }
+          td.free{
+            background-color: darkgray;
+            font-style: italic;
+          }
+    </style>
+</head>
+<body>
+     <h1>Weekly Course Schedule</h1>   
+
+     <table>
+        <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Tursday</th>
+            <th>friday</th>
+        </tr>
+
+        <tr>
+            <td>8:00-10:30</td>
+            <td>Operating system</td>
+            <td>Data Science</td>
+            <td class="free">Free</td>
+            <td>web Technologies</td>
+            <td>Islmic studies</td>
+        </tr>
+
+        <tr>
+            <td>10:30-01:00</td>
+            <td class="free">Free</td>
+            <td>Applies physics</td>
+            <td>AI(theory)</td>
+            <td>OP lab</td>
+            <td>WT lab</td>
+        </tr>
+
+        <tr>
+            <td>8:00-09:50</td>
+            <td class="lunch" colspan="5">lunch and prayer break </td>
+            
+        </tr>
+
+        <tr>
+            <td>1:30-4:00</td>
+            <td>AI</td>
+            <td class="free">Free</td>
+            <td>DS lab</td>
+            <td>Islmic studies</td>
+        </tr>
+     </table>
+</body>
+</html>
