@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 9: Responsive Dashboard Layout</title>
+  <link rel="stylesheet" href="../style/dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Fixed Sidebar -->
+    <aside class="sidebar">
+      <h2>Admin</h2>
+      <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Analytics</a>
+        <a href="#">Users</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <header class="topbar">
+        <h1>Welcome Back, Admin</h1>
+        <p>Overview of your system performance</p>
+      </header>
+
+      <!-- Stat Cards -->
+      <section class="stats">
+        <div class="card">
+          <h3>Total Users</h3>
+          <p>1,250</p>
+        </div>
+        <div class="card">
+          <h3>New Orders</h3>
+          <p>320</p>
+        </div>
+        <div class="card">
+          <h3>Revenue</h3>
+          <p>$12,450</p>
+        </div>
+        <div class="card">
+          <h3>Feedback</h3>
+          <p>89%</p>
+        </div>
+      </section>
+
+      <!-- Grid Content Section -->
+      <section class="grid-section">
+        <div class="panel">Recent Activity</div>
+        <div class="panel">Sales Chart</div>
+        <div class="panel">User Growth</div>
+        <div class="panel">Notifications</div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 8: E-commerce Product Grid</title>
+  <link rel="stylesheet" href="../style/ecommerce-grid.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Shop<span>Smart</span></div>
+    <button class="filter-toggle" id="filterToggle">☰ Filters</button>
+  </header>
+
+  <div class="layout-container">
+    <!-- Sidebar (Filters) -->
+    <aside class="sidebar" id="sidebar">
+      <h2>Filters</h2>
+      <form>
+        <h3>Category</h3>
+        <label><input type="checkbox"> Electronics</label><br>
+        <label><input type="checkbox"> Fashion</label><br>
+        <label><input type="checkbox"> Home Decor</label><br>
+
+        <h3>Price Range</h3>
+        <label><input type="radio" name="price"> Under $50</label><br>
+        <label><input type="radio" name="price"> $50 - $100</label><br>
+        <label><input type="radio" name="price"> Above $100</label>
+      </form>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="product-grid">
+      <!-- Product Cards -->
+      <div class="product">
+        <img src="https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg" alt="Product 1" />
+        <h3>Wireless Headphones</h3>
+        <p>High quality sound with noise cancellation.</p>
+        <div class="price">$89.99</div>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://images.pexels.com/photos/5632371/pexels-photo-5632371.jpeg" alt="Product 2" />
+        <h3>Smart Watch</h3>
+        <p>Track your fitness and stay connected.</p>
+        <div class="price">$129.99</div>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://images.pexels.com/photos/845434/pexels-photo-845434.jpeg" alt="Product 3" />
+        <h3>Modern Lamp</h3>
+        <p>Stylish lamp perfect for home and office.</p>
+        <div class="price">$45.00</div>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg" alt="Product 4" />
+        <h3>Leather Backpack</h3>
+        <p>Durable and elegant design with extra space.</p>
+        <div class="price">$99.00</div>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg" alt="Product 5" />
+        <h3>Wireless Mouse</h3>
+        <p>Ergonomic design with long battery life.</p>
+        <div class="price">$25.00</div>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://images.pexels.com/photos/845434/pexels-photo-845434.jpeg" alt="Product 6" />
+        <h3>Bluetooth Speaker</h3>
+        <p>Portable with deep bass and waterproof design.</p>
+        <div class="price">$59.00</div>
+        <button>Add to Cart</button>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 ShopSmart | Responsive Product Grid</p>
+  </footer>
+
+  <script>
+    // Toggle filter sidebar (off-canvas on mobile)
+    const filterToggle = document.getElementById('filterToggle');
+    const sidebar = document.getElementById('sidebar');
+
+    filterToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
