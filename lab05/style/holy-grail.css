@@ -1,0 +1,154 @@
+
+
+/* Basic / theme */
+:root{
+  --accent:#1a535c;
+  --muted:#f1f3f4;
+  --gap:16px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color:#222;
+  background: #fff;
+}
+
+/* Common page regions */
+.hg-header, .hg-footer{
+  background:var(--accent);
+  color:#fff;
+  padding:18px;
+  text-align:center;
+}
+.hg-container{
+  width:95%;
+  max-width:1100px;
+  margin:20px auto;
+  gap:var(--gap);
+}
+
+/* Common blocks (used by all methods) */
+.hg-left, .hg-main, .hg-right{
+  background:var(--muted);
+  padding:16px;
+  border-radius:6px;
+  min-height:160px;
+}
+
+/* small screens (mobile-first): stack vertically */
+@media (max-width: 767px){
+  /* container default is block; children stack */
+  .hg-left, .hg-main, .hg-right{
+    width:100%;
+    margin-bottom:var(--gap);
+  }
+}
+
+/* ---------------------------
+   1) Float-based method styles
+   file: holy-grail-float.html should have .float-method on container
+   --------------------------- */
+.float-method .hg-left{
+  float:left;
+  width:20%;
+}
+.float-method .hg-right{
+  float:right;
+  width:20%;
+}
+.float-method .hg-main{
+  margin:0 22%;
+  /* main takes remaining central space by margins */
+}
+
+/* clearfix */
+.float-method .clearfix::after{
+  content:"";
+  display:table;
+  clear:both;
+}
+
+/* Adjust float layout on tablet/desktop */
+@media (min-width: 768px) and (max-width:1023px){
+  .float-method .hg-left,
+  .float-method .hg-right{ width:22%; }
+  .float-method .hg-main{ margin:0 24%; }
+}
+@media (min-width: 1024px){
+  .float-method .hg-left,
+  .float-method .hg-right{ width:18%; }
+  .float-method .hg-main{ margin:0 20%; }
+}
+
+/* ---------------------------
+   2) Flexbox method (mobile-first)
+   file: holy-grail-flex.html should have .flex-method on container
+   --------------------------- */
+/* default (mobile): stacked (no special flex) */
+.flex-method{
+  /* we'll enable flex on larger screens */
+}
+/* make 3-column on wider screens */
+@media (min-width: 768px){
+  .flex-method{
+    display:flex;
+    align-items:flex-start;
+  }
+  .flex-method .hg-left{ flex:0 0 20%; }
+  .flex-method .hg-right{ flex:0 0 20%; }
+  .flex-method .hg-main{ flex:1 1 auto; }
+}
+
+/* ensure equal-height columns if content varies */
+.flex-method .hg-left,
+.flex-method .hg-main,
+.flex-method .hg-right{
+  display:flex;
+  flex-direction:column;
+}
+
+/* 
+   3) Grid method with named areas
+   file: holy-grail-grid.html should have .grid-method on container*/
+/* Default: stack (mobile) */
+.grid-method{
+  display:block;
+}
+
+/* Desktop: grid with named areas */
+@media (min-width: 768px){
+  .grid-method{
+    display:grid;
+    grid-template-columns: 18% 1fr 18%;
+    grid-template-areas:
+      "left main right";
+    gap:var(--gap);
+    align-items:start;
+  }
+  .grid-method .hg-left{ grid-area:left; }
+  .grid-method .hg-main{ grid-area:main; }
+  .grid-method .hg-right{ grid-area:right; }
+}
+
+/* Advanced grid rearrange on wide screens (example) */
+@media (min-width: 1200px){
+  .grid-method{
+    grid-template-columns: 16% 1fr 16%;
+  }
+}
+
+/* small styling tweaks for demo clarity*/
+.hg-left{ background:#e8f6f6; }
+.hg-right{ background:#fff3cd; }
+.hg-main{ background:#eef6ff; }
+
+.hg-main h2{ margin-top:0; color:var(--accent); }
+
+/* Accessibility / spacing */
+.hg-left, .hg-main, .hg-right { box-shadow:0 2px 6px rgba(0,0,0,0.05); }
+
+/* Footer spacing on small screens */
+@media (max-width:767px){
+  .hg-footer{ padding:14px; font-size:14px; }
+}
