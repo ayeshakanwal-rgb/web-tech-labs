@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 3: Positioning Challenge</title>
+  <link rel="stylesheet" href="../style/position.css" />
+</head>
+<body>
+  <!-- Fixed Header -->
+  <header class="site-header">
+    <h1>Positioning Challenge</h1>
+  </header>
+
+  <main class="content-area">
+    <!-- Sticky Sidebar -->
+    <aside class="sidebar">
+      <h2>Sidebar</h2>
+      <ul>
+        <li>Home</li>
+        <li>Articles</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </aside>
+
+    
+    <section class="main-content">
+      <h2>Scroll Down to See Positioning Effects</h2>
+      <p>
+        This layout demonstrates different CSS positioning techniques:
+        <strong>fixed header</strong>, <strong>sticky sidebar</strong>, 
+        and an <strong>absolute modal</strong>.
+      </p>
+
+      <p>
+        Keep scrolling to test sticky behavior. The sidebar will stay visible until the content ends.
+      </p>
+
+      <button id="openModal">Open Modal</button>
+
+      <div style="height: 1000px;"></div> <!-- scroll space -->
+    </section>
+  </main>
+
+  <!-- Modal Dialog (absolute) -->
+  <div class="modal" id="modalBox">
+    <div class="modal-content">
+      <h3>Modal Dialog</h3>
+      <p>This is an absolutely positioned modal window.</p>
+      <button id="closeModal">Close</button>
+    </div>
+  </div>
+
+  
+  <footer class="site-footer">
+    <p>&copy; 2025 CSS Positioning Demo</p>
+  </footer>
+
+  <script>
+    // Modal open/close functionality
+    const modal = document.getElementById('modalBox');
+    const openBtn = document.getElementById('openModal');
+    const closeBtn = document.getElementById('closeModal');
+
+    openBtn.onclick = () => (modal.style.display = 'flex');
+    closeBtn.onclick = () => (modal.style.display = 'none');
+  </script>
+</body>
+</html>
