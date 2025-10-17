@@ -1,0 +1,133 @@
+/* ---------------------------------------------------
+   Task 1 – Display Property Showcase
+   Author: Your Name
+   --------------------------------------------------- */
+
+/* 🔹 Global Styling */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 20px;
+  color: #222;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #1a535c;
+  text-align: center;
+}
+
+h2 {
+  color: #4ecdc4;
+  margin-top: 30px;
+}
+
+section {
+  margin-bottom: 40px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 20px;
+}
+
+/* ---------------------------------------------------
+   1️⃣ Block vs Inline vs Inline-block
+--------------------------------------------------- */
+.block-element {
+  display: block;
+  background-color: #f7b267;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.inline-element {
+  display: inline;
+  background-color: #70c1b3;
+  padding: 10px;
+}
+
+.inline-block-element {
+  display: inline-block;
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+/* ---------------------------------------------------
+   2️⃣ Table Display without <table>
+--------------------------------------------------- */
+.table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  border: 1px solid #bbb;
+  padding: 8px;
+}
+
+.header {
+  background-color: #ffe66d;
+  font-weight: bold;
+}
+
+/* ---------------------------------------------------
+   3️⃣ Responsive Display Changes
+--------------------------------------------------- */
+.responsive-box {
+  background-color: #1a535c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+/* ---------------------------------------------------
+   4️⃣ Hidden Elements Demo
+--------------------------------------------------- */
+.hide-mobile {
+  background-color: #ff595e;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.hide-desktop {
+  background-color: #1982c4;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+/* ---------------------------------------------------
+   📱 Media Queries – Responsive Behavior
+--------------------------------------------------- */
+
+/* Mobile (0 – 767px) */
+@media (max-width: 767px) {
+  .responsive-box {
+    display: block;
+    background-color: #ff9f1c;
+    font-size: 16px;
+  }
+  .hide-mobile {
+    display: none; /* hidden on mobile */
+  }
+}
+
+/* Tablet & Desktop (768px and up) */
+@media (min-width: 768px) {
+  .responsive-box {
+    display: inline-block;
+    background-color: #1a535c;
+    font-size: 18px;
+  }
+  .hide-desktop {
+    display: none; /* hidden on desktop */
+  }
+}
