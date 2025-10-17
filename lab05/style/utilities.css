@@ -1,0 +1,95 @@
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f7f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.header {
+  background: #1a535c;
+  color: white;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.bg-light {
+  background: #fff;
+}
+
+.bg-secondary {
+  background: #4ecdc4;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.box {
+  background: #1a535c;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
+
+/* --- Visibility Utilities --- */
+.show-mobile {
+  display: block;
+}
+.show-tablet,
+.show-desktop {
+  display: none;
+}
+
+/* --- Spacing Utilities --- */
+.p-1 { padding: 8px; }
+.p-2 { padding: 15px; }
+.p-3 { padding: 25px; }
+.m-1 { margin: 8px; }
+.m-2 { margin: 15px; }
+.mt-3 { margin-top: 25px; }
+
+/* --- Text Alignment --- */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* --- Flex Utilities --- */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.align-center { align-items: center; }
+
+
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+  .show-mobile { display: none; }
+  .show-tablet { display: block; }
+  .text-center { text-align: left; } /* changes for tablet */
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  .show-tablet { display: none; }
+  .show-desktop { display: block; }
+  .text-right { text-align: center; }
+  .flex-row { justify-content: space-around; }
+}
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+  .flex-row { justify-content: space-evenly; }
+  .p-3 { padding: 35px; }
+}
