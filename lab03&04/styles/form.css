@@ -1,0 +1,85 @@
+/* Task 6 – Form Styling */
+
+/* Section layout */
+#form-section {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Labels & inputs */
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus state */
+input:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+  outline: none;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+/* Styled button */
+.submit-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  background: linear-gradient(45deg, #007bff, #00b4d8);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(45deg, #0056b3, #0077b6);
+  transform: scale(1.03);
+}
+
+/* Disabled / error / success styles */
+input.error,
+select.error {
+  border-color: #e74c3c;
+  background-color: #fceae9;
+}
+input.success,
+select.success {
+  border-color: #2ecc71;
+  background-color: #eafaf1;
+}
+
+/* Feedback message */
+#message {
+  margin-top: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+#message.error { color: #e74c3c; }
+#message.success { color: #2ecc71; }

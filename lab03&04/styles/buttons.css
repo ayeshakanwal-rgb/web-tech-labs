@@ -1,0 +1,72 @@
+/* Task 5 – Button Styling Collection */
+
+/* Basic button setup */
+.btn {
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  margin: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+/* === Sizes === */
+.small { font-size: 13px; padding: 6px 12px; }
+.medium { font-size: 16px; padding: 10px 18px; }
+.large { font-size: 20px; padding: 14px 24px; }
+
+/* === Colors === */
+.primary { background-color: #007bff; }
+.success { background-color: #28a745; }
+.danger  { background-color: #dc3545; }
+.warning { background-color: #ffc107; color: #222; }
+.info    { background-color: #17a2b8; }
+
+/* === Shapes === */
+.round { border-radius: 50px; }
+
+/* === Hover & Focus States === */
+.btn:hover {
+  opacity: 0.85;
+  transform: scale(1.03);
+}
+.btn:focus {
+  outline: 2px solid #222;
+}
+
+/* === Transition Effects === */
+.transition1 {
+  background-color: #6f42c1;
+}
+.transition1:hover {
+  background-color: #5a32a3;
+}
+
+.transition2 {
+  background-color: #20c997;
+  transform: scale(1);
+}
+.transition2:hover {
+  transform: scale(1.1);
+}
+
+/* === Shadow & Gradient === */
+.gradient {
+  background: linear-gradient(45deg, #f0932b, #eb4d4b);
+}
+.shadow {
+  background-color: #2980b9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.shadow:hover {
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+}
+
+/* === Disabled State === */
+.btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

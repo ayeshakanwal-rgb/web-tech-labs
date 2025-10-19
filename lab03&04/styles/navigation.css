@@ -1,0 +1,93 @@
+/* Task 8 – Navigation Menu Styling */
+
+/* === Horizontal Navigation === */
+.nav-horizontal {
+  background: linear-gradient(45deg, #007bff, #00b4d8);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+.nav-horizontal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.nav-horizontal li {
+  position: relative;
+}
+.nav-horizontal a {
+  display: block;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.nav-horizontal a:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+.nav-horizontal .active a {
+  background-color: rgba(255,255,255,0.3);
+  font-weight: bold;
+}
+
+/* === Dropdown Styling === */
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 1;
+  border-radius: 4px;
+}
+.dropdown li a {
+  color: #007bff;
+  padding: 10px 15px;
+}
+.dropdown li a:hover {
+  background-color: #f1f1f1;
+}
+.nav-horizontal li:hover .dropdown {
+  display: block;
+}
+
+/* === Vertical Navigation === */
+.nav-vertical {
+  width: 180px;
+  margin: 30px auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.nav-vertical ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-vertical a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.nav-vertical a:hover {
+  background-color: #007bff;
+  color: white;
+}
+.nav-vertical a.active {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* === Responsive Design === */
+@media (max-width: 600px) {
+  .nav-horizontal ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-vertical {
+    width: 100%;
+  }
+}

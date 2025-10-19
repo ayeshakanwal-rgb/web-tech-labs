@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 6 – Form Styling</title>
+
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/form.css" />
+</head>
+<body>
+  <header>
+    <h1>Task 6 – Form Styling</h1>
+    <p>This task demonstrates a styled registration form with various CSS effects.</p>
+  </header>
+
+  <section id="form-section">
+    <h2>Registration Form</h2>
+    <form id="reg-form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" placeholder="Enter your full name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Create a password" required />
+
+      <label for="gender">Gender:</label>
+      <select id="gender">
+        <option value="">Select gender</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label>
+        <input type="checkbox" id="terms" required />
+        I agree to the Terms & Conditions
+      </label>
+
+      <button type="submit" class="submit-btn">Register</button>
+      <p id="message"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p><a href="../index.html">← Back to Lab 03 Home</a></p>
+  </footer>
+
+  <script>
+    // Simple JS to toggle success/error message for demo
+    const form = document.getElementById('reg-form');
+    const message = document.getElementById('message');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      if (name === '') {
+        message.textContent = 'Error: Please fill out all fields!';
+        message.className = 'error';
+      } else {
+        message.textContent = 'Registration successful!';
+        message.className = 'success';
+      }
+    });
+  </script>
+</body>
+</html>
