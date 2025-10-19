@@ -1,0 +1,65 @@
+/* Task 4 – Image Styling Portfolio */
+
+/* General layout */
+section {
+  margin-bottom: 50px;
+}
+.gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.gallery img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  border-radius: 6px;
+}
+
+/* 1. Rounded & circular images */
+.rounded { border-radius: 15px; }
+.circle  { border-radius: 50%; width: 150px; height: 150px; }
+
+/* 2. Borders & shadows */
+.bordered { border: 4px solid #4caf50; }
+.shadowed { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); }
+
+/* 3. Hover effects & transitions */
+.hover-zoom:hover { transform: scale(1.1); }
+.hover-fade:hover { opacity: 0.6; }
+
+/* 4. CSS filters */
+.gray     { filter: grayscale(100%); }
+.bright   { filter: brightness(1.3); }
+.contrast { filter: contrast(150%); }
+
+/* 5. Overlay with text */
+.overlay-box {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.overlay-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.overlay-box:hover .overlay-text { opacity: 1; }
