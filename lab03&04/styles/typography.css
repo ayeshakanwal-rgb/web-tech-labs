@@ -1,0 +1,40 @@
+
+/*  Google Fonts  */
+.poppins { font-family: 'Poppins', sans-serif; }
+.merriweather { font-family: 'Merriweather', serif; }
+.roboto { font-family: 'Roboto Mono', monospace; }
+
+/* Font Sizes  */
+.px { font-size: 18px; }
+.em { font-size: 1.5em; }
+.rem { font-size: 2rem; }
+.percent { font-size: 120%; }
+
+/* Alignment  */
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+.justify { text-align: justify; }
+
+/* Decoration & Transformation */
+.underline { text-decoration: underline; }
+.overline { text-decoration: overline; }
+.capitalize { text-transform: capitalize; }
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+
+/*  Text Shadow  */
+.shadow1 { text-shadow: 2px 2px 4px #aaa; }
+.shadow2 { text-shadow: 1px 1px 3px crimson; }
+.shadow3 { text-shadow: 0 0 8px #4caf50; }
+
+/* Basic section spacing */
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
