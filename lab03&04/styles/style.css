@@ -1,0 +1,21 @@
+/* Common styling for all Lab 03 pages */
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+h1, h2 {
+  color: teal;
+}
+
+a {
+  color: darkblue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: crimson;
+  text-decoration: underline;
+}

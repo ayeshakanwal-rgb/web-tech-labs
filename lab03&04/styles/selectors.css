@@ -1,0 +1,90 @@
+
+/*  Basic Selectors  */
+p {
+  color: #234f6d;
+  font-size: 16px;
+}
+
+.note {
+  background-color: #f7f7c0;
+  padding: 5px;
+  border-left: 4px solid #e1d200;
+}
+
+#special-text {
+  color: darkred;
+  font-weight: bold;
+}
+
+* {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  color: #0b7a75;
+}
+
+/* Attribute Selectors */
+a[target="_blank"] {
+  color: #0056b3;
+}
+
+input[type="password"] {
+  border: 2px solid #e67e22;
+}
+
+input[placeholder*="Name"] {
+  border: 2px solid #2ecc71;
+}
+
+/* Combinators */
+div > p {
+  color: #1a7431;
+}
+
+div p {
+  font-style: italic;
+}
+
+p + p {
+  color: #8e44ad;
+}
+
+p ~ p {
+  text-decoration: underline;
+}
+
+/*  Pseudo Classes */
+a:hover {
+  color: crimson;
+}
+
+input:focus {
+  outline: 2px solid royalblue;
+}
+
+button:hover {
+  background-color: #ffd54f;
+  cursor: pointer;
+}
+
+li:first-child {
+  color: darkred;
+}
+
+li:last-child {
+  color: darkgreen;
+}
+
+/*  Pseudo Elements  */
+.intro::first-letter {
+  font-size: 22px;
+  font-weight: bold;
+  color: #3366cc;
+}
+
+.intro::after {
+  content: " (styled using ::after)";
+  color: #888;
+  font-style: italic;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 1 – CSS Selectors Practice</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../styles/selectors.css" />
+</head>
+<body>
+  <header>
+    <h1>Task 1 – CSS Selectors Practice</h1>
+    <p>Exploring different types of CSS selectors and their effects.</p>
+  </header>
+
+  <!-- BASIC SELECTORS -->
+  <section id="basic">
+    <h2>1. Basic Selectors</h2>
+    <p>Welcome to my CSS practice page.</p>
+    <p class="note">This paragraph uses a class selector to look different.</p>
+    <p id="special-text">This text is styled with an ID selector.</p>
+    <div>A simple <strong>div</strong> element on the page.</div>
+    <h3>Grouped Selector Heading</h3>
+  </section>
+
+  <!-- ATTRIBUTE SELECTORS -->
+  <section id="attributes">
+    <h2>2. Attribute Selectors</h2>
+    <p>Below are examples using attribute selectors:</p>
+    <a href="https://www.wikipedia.org" target="_blank">Visit Wikipedia</a><br>
+    <a href="mailto:test@example.com">Send Email</a><br>
+    <input type="text" placeholder="Full Name">
+    <input type="password" placeholder="Enter Password">
+  </section>
+
+  <!-- COMBINATORS -->
+  <section id="combinators">
+    <h2>3. Combinators</h2>
+    <div class="container">
+      <p>This paragraph is a direct child of div (child selector).</p>
+      <div>
+        <p>This paragraph is nested deeper (descendant selector).</p>
+      </div>
+      <p class="next">I come right after another paragraph (adjacent sibling).</p>
+      <p>I am also after another paragraph (general sibling).</p>
+    </div>
+  </section>
+
+  <!-- PSEUDO CLASSES -->
+  <section id="pseudo">
+    <h2>4. Pseudo-Classes</h2>
+    <p>Hover over the links and focus on the input box below:</p>
+    <a href="#">Home</a> |
+    <a href="#">About</a> |
+    <a href="#">Contact</a>
+
+    <form>
+      <input type="text" placeholder="Focus here...">
+      <button>Submit</button>
+    </form>
+
+    <ul>
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ul>
+  </section>
+
+  <!-- PSEUDO ELEMENTS -->
+  <section id="pseudo-elements">
+    <h2>5. Pseudo-Elements</h2>
+    <p class="intro">
+      CSS pseudo-elements let us style specific parts of text, like the first letter or add virtual text after content.
+    </p>
+  </section>
+
+  <footer>
+    <p><a href="../index.html">← Back to Lab 03 Home</a></p>
+  </footer>
+</body>
+</html>
